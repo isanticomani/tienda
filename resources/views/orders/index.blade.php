@@ -48,8 +48,8 @@
 								<td>
 									<a href="#" data-type="select" data-pk="{{ $order->id }}"
 																							 	 data-url="{{ url("/orders/$order->id") }}"
-																							 	 data-title="Número de guía"
-																							 	 data-value="{{ $order->guide_number }}"
+																							 	 data-title="Status"
+																							 	 data-value="{{ $order->status }}"
 																							 	 calss="select-status"
 																							 	 data-name="status"></a>
 								</td>

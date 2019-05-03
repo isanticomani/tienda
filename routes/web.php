@@ -15,27 +15,30 @@
 //     return view('welcome');
 // });
 
-Route::get('/','MainController@home');
-Route::get('/carrito','ShoppingCartsController@index');
-Route::get('/payments/store','PaymentsController@store');
+// Route::domain('ecomerce.local.com')->group(function () {
+	Route::get('/','MainController@home');
+	Route::get('/carrito','ShoppingCartsController@index');
+	Route::get('/payments/store','PaymentsController@store');
 
-Auth::routes();
+	Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+	Route::get('/home', 'HomeController@index')->name('home');
 
-Route::resource('products','ProductsController');
+	Route::resource('products','ProductsController');
 
-Route::resource('in_shopping_carts','InShoppingCartsController',[
-	'only' => ['store','destroy']
-]);
+	Route::resource('in_shopping_carts','InShoppingCartsController',[
+		'only' => ['store','destroy']
+	]);
 
-Route::resource('compras','ShoppingCartsController',[
-	'only' => ['show']
-]);
+	Route::resource('compras','ShoppingCartsController',[
+		'only' => ['show']
+	]);
 
-Route::resource('orders','OrdersController',[
-	'only' => ['index','update']
-]);
+	Route::resource('orders','OrdersController',[
+		'only' => ['index','update']
+	]);
+// });
+
 
 // GET /products => index
 // POST /products => store
