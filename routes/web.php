@@ -15,7 +15,7 @@
 //     return view('welcome');
 // });
 
-// Route::domain('ecomerce.local.com')->group(function () {
+Route::domain('tienda.ivansanticomani.tk')->group(function () {
 	Route::get('/','MainController@home');
 	Route::get('/carrito','ShoppingCartsController@index');
 	Route::get('/payments/store','PaymentsController@store');
@@ -37,7 +37,7 @@
 	Route::resource('orders','OrdersController',[
 		'only' => ['index','update']
 	]);
-// });
+});
 
 
 // GET /products => index
